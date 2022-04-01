@@ -3,4 +3,4 @@ const serverDate = new Promise((resolve, eject) => {
         name: "alireza",
         family: "babaie"
     }
-})
+});
