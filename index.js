@@ -1,28 +1,12 @@
-const serverData = () => {
-    const Data = {
-        name: "alireza",
-        family: "babaei"
-    }
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("promise");
-            resolve(Data)
-        }, 500)
+import axios from "axios";
 
-        setTimeout(() => {
-            console.log("promise");
-            reject("rejected");
-        }, 1000)
-    })
+const getData = async () => {
+    const { data } = await axios("https://api.coindesk.com/v1/bpi/currentprice.json");
+    return data
 }
 
-const data = async () => {
-    return await serverData().then((res) => {
-        return res
-    }).catch((cat) => {
-        console.error(cat);
-    })
-}
+getData().then((res) => {
+    console.log(res);
+});
+console.log("ok");
 
-console.log(data());
-console.log("free");
