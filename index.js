@@ -1,46 +1,21 @@
-// proxy:
-// const user = {
-//     name: "alireza"
+// for (var x = 0; x =< 5; x++) {
+//     console.log(x);
 // }
 
-// const userProxy = new Proxy(user, {
-//     get(target, pop) {
-//         return pop in target ? `my name is ${target[pop]}` : null; ;
-//     },
-// })
 
-// console.log(userProxy.name);
-// console.log(userProxy.family);
-
-
-//for:
-// const number =[1, 2, 3, 4, 5, 6];
-
-// for (var i = 0; i < number.length ; i++ ) {
-//     console.log(i);
+// let i = 0
+// while (i < 5) {
+//     i++
+//     console.log(i)
 // }
 
-// Array(5).fill(0).map((item) => {
-//     console.log(item);
-// })
+// let a = 0;
 
+// do {
+//     a++;
+//     console.log(a);
+// } while(a<5)
 
-//switch
-const operator = "+";
-const num1 = 1;
-const num2 = 3;
+// const myArray = Array(5).fill(0).map((_, index) => index)
 
-switch (operator) {
-    case ("+"):
-        console.log(num1 + num2);
-        break;
-    case ("-"):
-        console.log(num1 - num2);
-        break;
-    case ("*"):
-        console.log(num1 * num2);
-        break;
-    case ("/"):
-        console.log(num1 / num2);
-        break;
-}
+// console.log(myArray);
