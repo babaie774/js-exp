@@ -1,18 +1,13 @@
-const person = {
-    name: "alireza",
-    family: "babaie",
-    get fullName() {
-        return `${name} ${family}`
-    },
-    set fullName(value) {
-        if (value) {
-            [this.name, this.family] = value.splice('');
-        } else {
-            console.log("fullname sould have vlaue");
-        }
+function greeting(kind) {
+    return function (name) {
+        console.log(`${kind} ${name}`);
     }
 }
 
-person.fullName = 'alireza babaei';
+const helllo = greeting("hello");
 
+helllo("alireza")
 
+const bye = greeting("bye");
+
+bye("ramin")
