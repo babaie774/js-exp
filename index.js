@@ -1,8 +1,13 @@
-const x = 20;
-
-(function logger(x) {
-    console.log(x);
-    setTimeout(() => {
-        logger();
-    }, 1000)
-}(10))
+function* numbers() {
+    yield 1;
+    yield 2;
+    yield 3;
+  
+    return 4;
+  }
+  
+  const items = numbers();
+  
+  for (num of items) {
+    console.log(num)
+  }
