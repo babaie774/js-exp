@@ -1,24 +1,23 @@
-class person {
-    constructor(name) {
-        this.name = name
-    }
-    logger() {
-        console.log(`${this.name} logged`);
-    }
-}
+const http = require("http");
+const qs = require("querystring");
 
-class human extends person {
-    // constructor(name,family) {
-    //     super(name)
-    //     // this.family = family;
-    // }
-}
+const server = http.createServer((req, res) => {
+    res.write(`
+    <html>
+    <head>
+    <title>search</title>
+    </head>
+    <body>
+    <form action="/" method="POST" >
+    <input name="search" />
+    <button type="submit">try it</button>
+    <form>
+    </body>
+    </html>
+    `)
+    res.end();
+})
 
-
-const alireza = new person('alireza');
-const hasan = new human("hasan","askari");
-
-alireza.logger();
-hasan.logger("hasan");
-// console.log(hasan.family);
-
+server.listen(3001, "127.0.0.1", () => {
+    console.log("server is running on 127.0.0.1");
+})
