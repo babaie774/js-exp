@@ -29,13 +29,12 @@ const server = http.createServer((req, res) => {
             console.log(body);
             const data = qs.parse(body)
             console.log(data.search);
-            // res.statusCode = 302;
-            // res.setHeader('Location', '/');
+            res.statusCode = 302;
+            res.setHeader('Location', '/res');
             // res.writeHead(302, { "Location": "/" })
-            res.writeHead(302, { 'Location': '/' })
-            res.end();
+            // res.writeHead(302, { 'Location': '/' })
+
         })
-        res.end();
     }
 })
 
