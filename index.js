@@ -16,3 +16,4 @@ class name {
 const alireza = new name();
 alireza.fullName = 'alireza';
 alireza.getName();
+
