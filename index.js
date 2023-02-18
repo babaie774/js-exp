@@ -1,9 +1,18 @@
-const promise = new Promise((resolve, rej) => {
-    resolve('hi');
-  });
-  
-  (async () => {
-  //   const data = await promise;
-  //   console.log(data);
-  })();
-  
+let user = {
+  personalData: {
+    name: 'alireza',
+    family: null,
+    age: 27,
+  },
+  job: 'programmer',
+};
+
+user = {
+  ...user,
+  personalData: {
+    ...user.personalData,
+    age: 25,
+  },
+};
+
+console.log(user);
